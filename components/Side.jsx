@@ -3,12 +3,12 @@ import { Image, Row, Text, Grid, Link,Container } from "@nextui-org/react";
 export const Side = () => {
     return (
         <Grid.Container css={{ h: "100%" }} >
-            <Grid css={{ h: "100%", justifyContent: "center", alignItems: "center", display: "flex" }} xs={12} sm={6}>
+            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex" }} xs={12} sm={6}>
                 <Container css={{ textAlign: "justify" }}>
-                    <Text h1 color="white" >
+                    <Text h2 color="white" >
                         Hi! I'm Gerson ✌️
                     </Text>
-                    <Text size={20} color="white" >
+                    <Text size={18} color="white" >
                         Junior Developer and I love learning new things about the world of programming, developing new skills and being in continuous learning. Get to know me a little more and I will surely surprise you.
                     </Text>
                     <Row css={{ marginTop: "$10" }}>
@@ -39,7 +39,7 @@ export const Side = () => {
                     </Row>
                 </Container>
             </Grid>
-            <Grid css={{ h: "100%", justifyContent: "center", alignItems: "center", display: "flex" }} xs={12} sm={6}>
+            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex" }} xs={12} sm={6}>
                 <Image
                     showSkeleton
                     css={{ borderRadius: "50%" }}
