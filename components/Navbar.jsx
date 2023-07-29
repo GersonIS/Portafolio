@@ -1,5 +1,5 @@
 import { Navbar, Link, Text, Avatar, Dropdown } from "@nextui-org/react";
-import { AcmeLogo } from "./AcmeLogo.js";
+import { AcmeLogo } from "./icons/AcmeLogo.js";
 
 const NavBar = () => {
     const collapseItems = [
@@ -16,7 +16,7 @@ const NavBar = () => {
     ];
 
     return (
-        <Navbar isBordered variant="sticky">
+        <Navbar variant="sticky">
             <Navbar.Toggle showIn="xs" />
             <Navbar.Brand
                 css={{
@@ -27,7 +27,7 @@ const NavBar = () => {
             >
                 <AcmeLogo />
                 <Text b color="inherit" hideIn="xs">
-                    ACME
+                    GR
                 </Text>
             </Navbar.Brand>
             <Navbar.Content
@@ -36,12 +36,12 @@ const NavBar = () => {
                 hideIn="xs"
                 variant="highlight-rounded"
             >
-                <Navbar.Link href="#">Features</Navbar.Link>
-                <Navbar.Link isActive href="#">
-                    Customers
+                <Navbar.Link autoFocus isActive href="#">About</Navbar.Link>
+                <Navbar.Link href="#">
+                    Skills
                 </Navbar.Link>
-                <Navbar.Link href="#">Pricing</Navbar.Link>
-                <Navbar.Link href="#">Company</Navbar.Link>
+                <Navbar.Link href="#">Projects</Navbar.Link>
+                <Navbar.Link href="#">Contact</Navbar.Link>
             </Navbar.Content>
             <Navbar.Content
                 css={{
