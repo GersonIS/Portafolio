@@ -16,7 +16,7 @@ const NavBar = () => {
     ];
 
     return (
-        <Navbar variant="sticky">
+        <Navbar variant="sticky" css={{ background: "$accents9" }}>
             <Navbar.Toggle showIn="xs" />
             <Navbar.Brand
                 css={{

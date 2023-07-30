@@ -12,16 +12,48 @@ export const Content = () => (
         <Box
             css={{
                 maxW: "100%",
-                h: "100vh"
+                h: "100vh",
+                background: "$accents5"
             }}
         >
-            <Box css={{ h: "calc(100% - 76px)", background: "#191E24" }}>
-                <Side />
-            </Box>
+            <Side />
         </Box >
-        <Skill />
-        <Project />
-        <Contact />
+        <Box
+            css={{
+                maxW: "100%",
+                h: "100vh",
+                background: "$blue400",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}
+        >
+            <Skill />
+        </Box>
+        <Box
+            css={{
+                maxW: "100%",
+                h: "100vh",
+                background: "$accents5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}
+        >
+            <Project />
+        </Box>
+        <Box
+            css={{
+                maxW: "100%",
+                h: "100vh",
+                background: "$blue400",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}
+        >
+            <Contact />
+        </Box>
         <Footer />
     </>
 );

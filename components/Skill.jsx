@@ -60,15 +60,15 @@ const Skill = () => {
     ]
 
     return (
-        <Grid.Container css={{ display: "block", marginBottom: "$10" }}>
+        <Grid.Container css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Grid css={{ textAlign: "center" }}>
                 <Text h2 color="black" css={{ w: "100%" }}>
                     Skills
                 </Text>
             </Grid>
-            <Grid.Container css={{ textAlign: "center", display: "flex", justifyContent: "center" }} gap={5} >
+            <Grid.Container gap={5} css={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
                 {skills.map((el, index) => (<Grid css={{
-                    display: "block", '&:hover': {
+                    '&:hover': {
                         background: '$gray200',
                         color: '$gray600',
                     },
