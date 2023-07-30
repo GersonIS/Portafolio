@@ -62,12 +62,12 @@ const Contact = () => {
     return (
             <Grid.Container css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <Grid css={{ textAlign: "center" }}>
-                    <Text h2 color="black" css={{ w: "100%" }}>
+                    <Text h2 color="white" css={{ w: "100%" }}>
                         Contact
                     </Text>
                 </Grid>
                 <Grid.Container gap={5} css={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
-                    {skills.map((el, index) => (<Grid css={{
+                    {skills.map((el, index) => (<Grid key={index} css={{
                         '&:hover': {
                             background: '$gray200',
                             color: '$gray600',

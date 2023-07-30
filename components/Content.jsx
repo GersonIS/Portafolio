@@ -3,26 +3,31 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
 import Project from "./Project";
+import ScrollToTopButton from "./ScrollToTopButton";
 import { Side } from "./Side";
 import Skill from "./Skill";
 
 export const Content = () => (
     <>
         <NavBar />
+        <ScrollToTopButton />
         <Box
+            id="about"
             css={{
                 maxW: "100%",
                 h: "100vh",
-                background: "$accents5"
+                background: "$gray500"
             }}
         >
             <Side />
         </Box >
+        
         <Box
+            id="skill"
             css={{
                 maxW: "100%",
                 h: "100vh",
-                background: "$blue400",
+                background: "$gray600",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center"
@@ -31,10 +36,11 @@ export const Content = () => (
             <Skill />
         </Box>
         <Box
+            id="project"
             css={{
                 maxW: "100%",
                 h: "100vh",
-                background: "$accents5",
+                background: "$gray700",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center"
@@ -43,10 +49,11 @@ export const Content = () => (
             <Project />
         </Box>
         <Box
+            id="contact"
             css={{
                 maxW: "100%",
                 h: "100vh",
-                background: "$blue400",
+                background: "$gray800",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center"

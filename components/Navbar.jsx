@@ -1,19 +1,44 @@
 import { Navbar, Link, Text, Avatar, Dropdown } from "@nextui-org/react";
 import { AcmeLogo } from "./icons/AcmeLogo.js";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
     const collapseItems = [
-        "Profile",
-        "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
+        {
+            id: "about",
+            name: "About"
+        },
+        {
+            id: "skill",
+            name: "Skill"
+        },
+        {
+            id: "project",
+            name: "Project"
+        },
+        {
+            id: "contact",
+            name: "Contact"
+        },
     ];
+    const [active, setActive] = useState("");
+    useEffect(() => {
+        // Obtener la URL completa del navegador
+        const currentURL = window.location.href;
+    
+        // Verificar si la URL contiene un hash (#)
+        if (currentURL.includes('#')) {
+          // Eliminar el hash y redirigir a la versión sin el hash
+          const cleanURL = currentURL.split('#')[1] || "";
+          setActive(cleanURL)
+        }
+      }, []);
+      
+
+    const activo = (texto) => {
+        setActive(texto);
+    }
+   
 
     return (
         <Navbar variant="sticky" css={{ background: "$accents9" }}>
@@ -36,12 +61,10 @@ const NavBar = () => {
                 hideIn="xs"
                 variant="highlight-rounded"
             >
-                <Navbar.Link autoFocus isActive href="#">About</Navbar.Link>
-                <Navbar.Link href="#">
-                    Skills
-                </Navbar.Link>
-                <Navbar.Link href="#">Projects</Navbar.Link>
-                <Navbar.Link href="#">Contact</Navbar.Link>
+                <Navbar.Link autoFocus href="#about" onClick={() => activo("about")} isActive={active === "about" || active === "" ? true : false}>About</Navbar.Link>
+                <Navbar.Link href="#skill" onClick={() => activo("skill")} isActive={active === "skill" ? true : false}>Skills</Navbar.Link>
+                <Navbar.Link href="#project" onClick={() => activo("project")} isActive={active === "project" ? true : false}>Projects</Navbar.Link>
+                <Navbar.Link href="#contact" onClick={() => activo("contact")} isActive={active === "contact" ? true : false}>Contact</Navbar.Link>
             </Navbar.Content>
             <Navbar.Content
                 css={{
@@ -95,23 +118,21 @@ const NavBar = () => {
                 </Dropdown>
             </Navbar.Content>
             <Navbar.Collapse>
-                {collapseItems.map((item, index) => (
+                {collapseItems.map((el, index) => (
                     <Navbar.CollapseItem
-                        key={item}
+                        key={index}
                         activeColor="secondary"
-                        css={{
-                            color: index === collapseItems.length - 1 ? "$error" : "",
-                        }}
-                        isActive={index === 2}
+                        isActive={el.id === active}
                     >
                         <Link
                             color="inherit"
+                            onClick={() => activo(el.id)}
                             css={{
                                 minWidth: "100%",
                             }}
-                            href="#"
+                            href={`#${el.id}`}
                         >
-                            {item}
+                            {el.name}
                         </Link>
                     </Navbar.CollapseItem>
                 ))}

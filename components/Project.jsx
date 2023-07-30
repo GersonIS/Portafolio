@@ -1,5 +1,4 @@
 import { Grid, Image, Row, Text } from "@nextui-org/react";
-import { Box } from "./Box";
 
 const skills = [
     {
@@ -63,12 +62,12 @@ const Project = () => {
     return (
         <Grid.Container css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Grid css={{ textAlign: "center" }}>
-                <Text h2 color="black" css={{ w: "100%" }}>
+                <Text h2 color="white" css={{ w: "100%" }}>
                     Projects
                 </Text>
             </Grid>
             <Grid.Container gap={5} css={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
-                {skills.map((el, index) => (<Grid css={{
+                {skills.map((el, index) => (<Grid key={index} css={{
                     '&:hover': {
                         background: '$gray200',
                         color: '$gray600',

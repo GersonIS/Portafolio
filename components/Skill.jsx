@@ -62,15 +62,15 @@ const Skill = () => {
     return (
         <Grid.Container css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Grid css={{ textAlign: "center" }}>
-                <Text h2 color="black" css={{ w: "100%" }}>
+                <Text h2 color="white" css={{ w: "100%" }}>
                     Skills
                 </Text>
             </Grid>
             <Grid.Container gap={5} css={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
-                {skills.map((el, index) => (<Grid css={{
+                {skills.map((el, index) => (<Grid key={index} css={{
                     '&:hover': {
-                        background: '$gray200',
-                        color: '$gray600',
+                        background: '$gray500',
+                        color: '$gray800',
                     },
                 }}><Image
                         showSkeleton
@@ -81,7 +81,7 @@ const Skill = () => {
                         alt={el.alt}
                         key={index}
                         className="animated-grid" />
-                    <Text h6 color="black">
+                    <Text h6 color="white">
                         {el.name}
                     </Text></Grid>
                 ))}

@@ -2,13 +2,13 @@ import { Image, Row, Text, Grid, Link,Container } from "@nextui-org/react";
 
 export const Side = () => {
     return (
-        <Grid.Container css={{ h: "100%", w: "100%", background: "$accents5", paddingBottom: "$20" }} >
+        <Grid.Container css={{ h: "100%", w: "100%", paddingBottom: "$20" }} >
             <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex" }} xs={12} sm={6}>
                 <Container css={{ textAlign: "center", marginBottom: "$10" }}>
-                    <Text h2 color="white" >
+                    <Text h2 color="black" >
                         Hi! I'm Gerson ✌️
                     </Text>
-                    <Text size={20} color="white" >
+                    <Text size={20} color="black" >
                         Junior Developer and I love learning new things about the world of programming, developing new skills and being in continuous learning. Get to know me a little more and I will surely surprise you.
                     </Text>
                     <Row css={{ marginTop: "$10", justifyContent: "center" }}>
