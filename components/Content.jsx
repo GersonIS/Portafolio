@@ -18,10 +18,11 @@ export const Content = () => (
                 h: "100%",
                 background: "$gray500"
             }}
+            className="section"
         >
             <Side />
         </Box >
-        
+
         <Box
             id="skill"
             css={{
@@ -29,6 +30,7 @@ export const Content = () => (
                 h: "100%",
                 background: "$gray600"
             }}
+            className="section"
         >
             <Skill />
         </Box>
@@ -39,6 +41,7 @@ export const Content = () => (
                 h: "100%",
                 background: "$gray700"
             }}
+            className="section"
         >
             <Project />
         </Box>
@@ -49,6 +52,7 @@ export const Content = () => (
                 h: "100%",
                 background: "$gray800"
             }}
+            className="section"
         >
             <Contact />
         </Box>

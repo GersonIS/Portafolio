@@ -21,24 +21,36 @@ const NavBar = () => {
             name: "Contact"
         },
     ];
+
     const [active, setActive] = useState("");
+
     useEffect(() => {
         // Obtener la URL completa del navegador
         const currentURL = window.location.href;
-    
+
         // Verificar si la URL contiene un hash (#)
         if (currentURL.includes('#')) {
-          // Eliminar el hash y redirigir a la versión sin el hash
-          const cleanURL = currentURL.split('#')[1] || "";
-          setActive(cleanURL)
+            // Eliminar el hash y redirigir a la versión sin el hash
+            const cleanURL = currentURL.split('#')[1] || "";
+            setActive(cleanURL)
         }
-      }, []);
-      
+    }, []);
+
+    useEffect(() => {
+        const sectionItem = window.document.querySelectorAll(".section");
+        window.addEventListener('scroll', () => {
+            sectionItem.forEach(el => {
+                if (window.scrollY >= el.offsetTop - 100) {
+                    activo(el.id);
+                }
+            })
+        })
+    }, [active]);
 
     const activo = (texto) => {
         setActive(texto);
     }
-   
+
 
     return (
         <Navbar css={{ background: "transparent" }} variant="sticky" className="navbar">
@@ -60,11 +72,12 @@ const NavBar = () => {
                 activeColor="secondary"
                 hideIn="xs"
                 variant="highlight-rounded"
+
             >
-                <Navbar.Link autoFocus href="#about" onClick={() => activo("about")} isActive={active === "about" || active === "" ? true : false}>About</Navbar.Link>
-                <Navbar.Link href="#skill" onClick={() => activo("skill")} isActive={active === "skill" ? true : false}>Skills</Navbar.Link>
-                <Navbar.Link href="#project" onClick={() => activo("project")} isActive={active === "project" ? true : false}>Projects</Navbar.Link>
-                <Navbar.Link href="#contact" onClick={() => activo("contact")} isActive={active === "contact" ? true : false}>Contact</Navbar.Link>
+                <Navbar.Link className="navItem" autoFocus href="#about" onClick={() => activo("about")} isActive={active === "about" || active === "" ? true : false}>About</Navbar.Link>
+                <Navbar.Link className="navItem" href="#skill" onClick={() => activo("skill")} isActive={active === "skill" ? true : false}>Skills</Navbar.Link>
+                <Navbar.Link className="navItem" href="#project" onClick={() => activo("project")} isActive={active === "project" ? true : false}>Projects</Navbar.Link>
+                <Navbar.Link className="navItem" href="#contact" onClick={() => activo("contact")} isActive={active === "contact" ? true : false}>Contact</Navbar.Link>
             </Navbar.Content>
             <Navbar.Content
                 css={{
@@ -117,7 +130,7 @@ const NavBar = () => {
                     </Dropdown.Menu>
                 </Dropdown>
             </Navbar.Content>
-            <Navbar.Collapse>
+            <Navbar.Collapse >
                 {collapseItems.map((el, index) => (
                     <Navbar.CollapseItem
                         key={index}
