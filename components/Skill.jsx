@@ -60,13 +60,13 @@ const Skill = () => {
     ]
 
     return (
-        <Grid.Container css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Grid.Container css={{ display: "flex", justifyContent: "center", alignItems: "center", h: "100%", paddingTop: "$20", paddingBottom: "$20" }}>
             <Grid css={{ textAlign: "center" }}>
                 <Text h2 color="white" css={{ w: "100%" }}>
                     Skills
                 </Text>
             </Grid>
-            <Grid.Container gap={5} css={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
+            <Grid.Container gap={5} css={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "$4", marginBottom: "$4" }} >
                 {skills.map((el, index) => (<Grid key={index} css={{
                     '&:hover': {
                         background: '$gray500',
@@ -86,6 +86,17 @@ const Skill = () => {
                     </Text></Grid>
                 ))}
             </Grid.Container>
+            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex", marginTop: "$10" }} xs={12}>
+                <Image
+                    showSkeleton
+                    width={240}
+                    height={180}
+                    maxDelay={10000}
+                    css={{ borderRadius: "8px" }}
+                    src="/codeloop.gif"
+                    alt="Default Image"
+                />
+            </Grid>
         </Grid.Container>
     )
 }

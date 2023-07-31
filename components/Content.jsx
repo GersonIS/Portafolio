@@ -14,8 +14,8 @@ export const Content = () => (
         <Box
             id="about"
             css={{
-                maxW: "100%",
-                h: "100vh",
+                maxW: "100vw",
+                h: "100%",
                 background: "$gray500"
             }}
         >
@@ -25,12 +25,9 @@ export const Content = () => (
         <Box
             id="skill"
             css={{
-                maxW: "100%",
-                h: "100vh",
-                background: "$gray600",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
+                maxW: "100vw",
+                h: "100%",
+                background: "$gray600"
             }}
         >
             <Skill />
@@ -38,12 +35,9 @@ export const Content = () => (
         <Box
             id="project"
             css={{
-                maxW: "100%",
-                h: "100vh",
-                background: "$gray700",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
+                maxW: "100vw",
+                h: "100%",
+                background: "$gray700"
             }}
         >
             <Project />
@@ -51,12 +45,9 @@ export const Content = () => (
         <Box
             id="contact"
             css={{
-                maxW: "100%",
-                h: "100vh",
-                background: "$gray800",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
+                maxW: "100vw",
+                h: "100%",
+                background: "$gray800"
             }}
         >
             <Contact />

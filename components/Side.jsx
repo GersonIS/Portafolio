@@ -1,10 +1,10 @@
-import { Image, Row, Text, Grid, Link,Container } from "@nextui-org/react";
+import { Image, Row, Text, Grid, Link, Container } from "@nextui-org/react";
 
 export const Side = () => {
     return (
-        <Grid.Container css={{ h: "100%", w: "100%", paddingBottom: "$20" }} >
-            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex" }} xs={12} sm={6}>
-                <Container css={{ textAlign: "center", marginBottom: "$10" }}>
+        <Grid.Container css={{ paddingTop: "$16", paddingBottom: "$15", marginTop: "$15", h: "100%" }} >
+            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex", paddingTop: "$10" }} xs={12} sm={6}>
+                <Container css={{ textAlign: "center" }}>
                     <Text h2 color="black" >
                         Hi! I'm Gerson ✌️
                     </Text>
@@ -39,12 +39,23 @@ export const Side = () => {
                     </Row>
                 </Container>
             </Grid>
-            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex" }} xs={12} sm={6}>
+            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex", marginTop: "$10", paddingTop: "$10", paddingBottom: "$13" }} xs={12} sm={6}>
                 <Image
                     showSkeleton
                     css={{ borderRadius: "50%" }}
                     maxDelay={10000}
                     src="/perfil.jpg"
+                    alt="Default Image"
+                />
+            </Grid>
+            <Grid css={{ justifyContent: "center", alignItems: "center", display: "flex" }} xs={12}>
+                <Image
+                    showSkeleton
+                    width={180}
+                    height={180}
+                    maxDelay={10000}
+                    css={{borderRadius: "8px"}}
+                    src="/tenor.gif"
                     alt="Default Image"
                 />
             </Grid>

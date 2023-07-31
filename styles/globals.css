@@ -139,3 +139,11 @@ body {
 .scroll-to-top-button.visible {
   opacity: 1;
 }
+
+html,body{
+  overflow-x: hidden;
+}
+
+.navbar{
+  position: fixed;
+}

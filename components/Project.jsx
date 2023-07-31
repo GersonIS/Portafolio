@@ -1,4 +1,5 @@
-import { Grid, Image, Row, Text } from "@nextui-org/react";
+import { Grid, Row, Text, Card, Button } from "@nextui-org/react";
+import css from "styled-jsx/css";
 
 const skills = [
     {
@@ -60,33 +61,220 @@ const skills = [
 
 const Project = () => {
     return (
-        <Grid.Container css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <Grid css={{ textAlign: "center" }}>
+        <Grid.Container css={{  display: "flex", justifyContent: "center", alignItems: "center", h: "100%", paddingTop: "$20", paddingBottom: "$20" }} gap={2}>
+            <Grid css={{ textAlign: "center" }} xs={12}>
                 <Text h2 color="white" css={{ w: "100%" }}>
                     Projects
                 </Text>
             </Grid>
-            <Grid.Container gap={5} css={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
-                {skills.map((el, index) => (<Grid key={index} css={{
-                    '&:hover': {
-                        background: '$gray200',
-                        color: '$gray600',
-                    },
-                }}><Image
-                        showSkeleton
-                        maxDelay={10000}
-                        width={40}
-                        height={40}
-                        src={el.src}
-                        alt={el.alt}
-                        key={index}
-                        className="animated-grid" />
-                    <Text h6 color="black">
-                        {el.name}
-                    </Text></Grid>
-                ))}
-            </Grid.Container>
-        </Grid.Container>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card>
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card>
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card >
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card >
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card >
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card>
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card>
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card>
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+            <Grid xs={12} md={4} sm={6} lg={3} css={{paddingLeft: "$15", paddingRight: "$18"}}>
+                <Card>
+                    <Card.Header>
+                        <Text b>Card Title</Text>
+                    </Card.Header>
+                    <Card.Divider />
+                    <Card.Body css={{ py: "$10" }}>
+                        <Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Row justify="flex-end">
+                            <Button size="sm" light>
+                                Cancel
+                            </Button>
+                            <Button size="sm">Agree</Button>
+                        </Row>
+                    </Card.Footer>
+                </Card>
+            </Grid>
+        </Grid.Container >
     )
 }
 
